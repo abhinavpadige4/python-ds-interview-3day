@@ -22,26 +22,26 @@ Focus: pointer manipulation, iterative vs recursive, monotonic stacks, BFS/DFS w
 
 | # | Problem | File |
 |---|---------|------|
-| 8 | Reverse Linked List | `solutions/0021_reverse_linked_list.py` |
-| 9 | Detect Cycle in Linked List | `solutions/00141_linked_list_cycle.py` |
+| 8 | Reverse Linked List | `solutions/0206_reverse_linked_list.py` |
+| 9 | Detect Cycle in Linked List | `solutions/0141_linked_list_cycle.py` |
 | 10 | Merge Two Sorted Lists | `solutions/0021_merge_two_sorted_lists.py` |
 | 11 | Valid Parentheses | `solutions/0020_valid_parentheses.py` |
-| 12 | Min Stack | `solutions/00155_min_stack.py` |
-| 13 | Daily Temperatures | `solutions/00739_daily_temperatures.py` |
-| 14 | Implement Queue using Stacks | `solutions/00232_implement_queue_using_stacks.py` |
+| 12 | Min Stack | `solutions/0155_min_stack.py` |
+| 13 | Daily Temperatures | `solutions/0739_daily_temperatures.py` |
+| 14 | Implement Queue using Stacks | `solutions/0232_implement_queue_using_stacks.py` |
 
 ### Day 3 — Trees, Heaps, Graphs
 Focus: recursion on trees, heap-based top-K, BFS/DFS on graphs, topological sort.
 
 | # | Problem | File |
 |---|---------|------|
-| 15 | Binary Tree Level Order Traversal | `solutions/00102_binary_tree_level_order.py` |
-| 16 | Maximum Depth of Binary Tree | `solutions/00104_max_depth_binary_tree.py` |
+| 15 | Binary Tree Level Order Traversal | `solutions/0102_binary_tree_level_order.py` |
+| 16 | Maximum Depth of Binary Tree | `solutions/0104_max_depth_binary_tree.py` |
 | 17 | Validate Binary Search Tree | `solutions/0098_validate_bst.py` |
-| 18 | Kth Largest Element in Array | `solutions/00215_kth_largest_element.py` |
-| 19 | Number of Islands | `solutions/00200_number_of_islands.py` |
-| 20 | Course Schedule (Topological Sort) | `solutions/00207_course_schedule.py` |
-| 21 | Clone Graph | `solutions/00133_clone_graph.py` |
+| 18 | Kth Largest Element in Array | `solutions/0215_kth_largest_element.py` |
+| 19 | Number of Islands | `solutions/0200_number_of_islands.py` |
+| 20 | Course Schedule (Topological Sort) | `solutions/0207_course_schedule.py` |
+| 21 | Clone Graph | `solutions/0133_clone_graph.py` |
 
 ## Complexity Cheat Sheet
 
@@ -63,7 +63,7 @@ Focus: recursion on trees, heap-based top-K, BFS/DFS on graphs, topological sort
 2. Open each solution file — every file contains a full working implementation with:
    - Problem statement
    - Approach explanation
-   - Time & space complexity
+   - Time and space complexity
    - Edge cases
    - A `if __name__ == "__main__":` block with sample tests
 3. Run any file directly: `python solutions/0001_two_sum.py`
@@ -80,3 +80,9 @@ Focus: recursion on trees, heap-based top-K, BFS/DFS on graphs, topological sort
 - **Trees**: recursion is natural; BFS with `deque` for level order; BST invariant: left < node < right.
 - **Heaps**: `heapq` is a min-heap; negate values for max-heap; top-K problems.
 - **Graphs**: adjacency list; DFS for reachability, BFS for shortest path in unweighted; Kahn's algorithm for topological sort.
+
+## Daily Study Cadence
+
+- **Day 1 (2-3 hours)**: Read built-in complexity notes. Solve Day 1 problems. Focus on hash-map patterns.
+- **Day 2 (2-3 hours)**: Implement linked list from scratch. Solve Day 2 problems. Practice monotonic stack.
+- **Day 3 (2-3 hours)**: Draw trees on paper. Solve Day 3 problems. Practice BFS/DFS and topological sort.
