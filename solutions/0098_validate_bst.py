@@ -16,6 +16,9 @@ Space: O(h)
 """
 from typing import Optional
 
+NEG_INF = -10 ** 18
+POS_INF = 10 ** 18
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -25,14 +28,14 @@ class TreeNode:
 
 
 def is_valid_bst(root: Optional[TreeNode]) -> bool:
-    def validate(node, low=float("-inf"), high=float("inf")):
+    def validate(node, low, high):
         if not node:
             return True
         if not (low < node.val < high):
             return False
         return validate(node.left, low, node.val) and validate(node.right, node.val, high)
 
-    return validate(root)
+    return validate(root, NEG_INF, POS_INF)
 
 
 def _build(vals):
