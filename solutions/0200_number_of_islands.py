@@ -8,8 +8,8 @@ Approach: DFS flood fill
 - For each unvisited land cell, start a DFS that marks all connected land as visited.
 - Each DFS start = one island.
 
-Time:  O(m * n)
-Space: O(m * n) worst case (recursion stack)
+Time:  O(m*n)
+Space: O(m*n) worst case (recursion stack)
 """
 from typing import List
 
