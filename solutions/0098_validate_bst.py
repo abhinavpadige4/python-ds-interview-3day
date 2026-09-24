@@ -10,14 +10,12 @@ A valid BST satisfies:
 
 Approach: Recursion with bounds
 - Pass (low, high) bounds down; each node must be within bounds.
+- Use None to represent unbounded.
 
 Time:  O(n)
 Space: O(h)
 """
 from typing import Optional
-
-NEG_INF = -10 ** 18
-POS_INF = 10 ** 18
 
 
 class TreeNode:
@@ -31,11 +29,13 @@ def is_valid_bst(root: Optional[TreeNode]) -> bool:
     def validate(node, low, high):
         if not node:
             return True
-        if not (low < node.val < high):
+        if low is not None and node.val <= low:
+            return False
+        if high is not None and node.val >= high:
             return False
         return validate(node.left, low, node.val) and validate(node.right, node.val, high)
 
-    return validate(root, NEG_INF, POS_INF)
+    return validate(root, None, None)
 
 
 def _build(vals):
